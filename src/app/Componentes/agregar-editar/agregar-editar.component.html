@@ -1,0 +1,23 @@
+<h3 class="mt-5">{{accion}} Comentario</h3>
+
+<form class="mt-4" [formGroup]="agregarComentario" (ngSubmit)="agregarEditar()">
+    <div class="mb-3">
+        <label for="Titulo" class="form-label">Titulo</label>
+        <input type="text" formControlName="titulo" class="form-control" id="Titulo" autocomplete="off">
+    </div>
+
+    <div class="mb-3">
+        <label for="auth" class="form-label">Creador</label>
+        <input type="text" formControlName="creador" class="form-control" id="auth" autocomplete="off">
+    </div>
+
+    <div class="mb-3">
+        <label for="text" class="form-label">Texto</label>
+        <textarea name="" id="text" formControlName="texto" class="form-control" rows="6" placeholder="Escriba su Comentario" autocomplete="off"></textarea>
+    </div>
+
+    <div class="mt-5">
+        <button class="btn btn-primary float-end" type="submit">Aceptar</button>
+        <button class="btn btn-secondary" routerLink="/" type="button">Volver</button>
+    </div>
+</form>
